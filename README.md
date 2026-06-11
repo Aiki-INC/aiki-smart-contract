@@ -1,67 +1,43 @@
-## Foundry
+# Aiki Smart Contracts
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+Aiki is an open-source Web3 education platform for course creation, learner enrollment, progress tracking, verifiable certificates, and learning rewards.
 
-Foundry consists of:
+This repository contains the smart contracts that power Aiki’s decentralized learning infrastructure.
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## Core Features
 
-## Documentation
+The smart contract system supports:
 
-https://book.getfoundry.sh/
+- Instructor registration
+- Course creation
+- Course pricing
+- Learner enrollment
+- Learner progress tracking
+- Course completion
+- Certificate issuance
+- Reward token logic
 
-## Usage
+## Why Blockchain?
 
-### Build
+Aiki uses blockchain infrastructure to make learning records more transparent, portable, and verifiable.
 
-```shell
-$ forge build
-```
+This helps:
 
-### Test
+- Learners prove completed courses.
+- Instructors maintain transparent course records.
+- Institutions issue certificates that can be independently verified.
+- Communities reward meaningful learning activity.
 
-```shell
-$ forge test
-```
+## Tech Stack
 
-### Format
+- Solidity
+- Foundry
+- OpenZeppelin
 
-```shell
-$ forge fmt
-```
+## Repository Structure
 
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:AikiCourses
- --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+```text
+src/        Smart contracts
+test/       Contract tests
+script/     Deployment scripts
+lib/        Dependencies

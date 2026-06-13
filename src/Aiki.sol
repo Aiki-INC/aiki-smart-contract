@@ -328,7 +328,11 @@ contract Aiki is ERC721URIStorage, Ownable {
   /**
    * @dev Check if a certificate is valid
    */
-  function verifyCertificate(uint256 certificateId, address recipient) external view returns (bool) {
+  function verifyCertificate(uint256 certificateId, address recipient)
+    external
+    view
+    returns (bool)
+  {
     return certificates[certificateId].recipient == recipient && _exists(certificateId);
   }
 }

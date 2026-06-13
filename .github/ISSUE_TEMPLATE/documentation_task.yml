@@ -1,0 +1,39 @@
+name: Documentation task
+description: Create or improve documentation for Aiki
+title: "docs: "
+labels: ["documentation"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What documentation should be created or improved?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What should be included?
+      placeholder: |
+        - Add setup steps
+        - Add examples
+        - Add screenshots
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: How will maintainers know this is complete?
+    validations:
+      required: true
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Suggested difficulty
+      options:
+        - Trivial
+        - Medium
+        - High
+        - Not sure

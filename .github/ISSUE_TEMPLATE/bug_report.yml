@@ -1,0 +1,45 @@
+name: Bug report
+description: Report a bug or broken behavior in Aiki
+title: "bug: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What is the bug?
+      placeholder: Describe the problem clearly.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can maintainers reproduce this issue?
+      placeholder: |
+        1. Go to ...
+        2. Click ...
+        3. See error ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should happen instead?
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or logs
+      description: Add screenshots, console logs, or terminal output if useful.
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Suggested difficulty
+      options:
+        - Trivial
+        - Medium
+        - High
+        - Not sure

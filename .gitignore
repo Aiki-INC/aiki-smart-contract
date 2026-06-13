@@ -1,17 +1,20 @@
-# Compiler files
+# Compiler outputs
 cache/
 out/
 
-# Ignores development broadcast logs
-!/broadcast
-/broadcast/*/31337/
-/broadcast/**/dry-run/
+# Broadcast logs
+broadcast/
+!/broadcast/**/README.md
 
-# Docs
-docs/
-
-# Dotenv file
+# Local environment files
 .env
-.env.example
+.env.local
+.env.*.local
 
-script/deploy_aiki_script.sh
+# OS/editor files
+.DS_Store
+.vscode/
+.idea/
+
+# Dependencies generated locally if not using submodules
+node_modules/

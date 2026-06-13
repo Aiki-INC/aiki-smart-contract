@@ -1,149 +1,48 @@
-# Contributing to Aiki
+# Contributing to Aiki Smart Contracts
 
-Thank you for your interest in contributing to Aiki.
-
-Aiki is an open-source Web3 education platform for course creation, learner dashboards, verifiable certificates, and learning rewards. We welcome contributions from developers, designers, technical writers, product thinkers, and Web3/Stellar ecosystem contributors.
+Thank you for contributing to Aiki.
 
 ## How to Contribute
 
-### 1. Find an Issue
+1. Check the Issues tab.
+2. Comment on the issue you want to work on.
+3. Fork the repository.
+4. Create a branch for your work.
+5. Make focused changes.
+6. Run the checks before opening a pull request.
 
-Start by checking the repository Issues tab.
-
-Look for labels such as:
-
-- `good first issue`
-- `documentation`
-- `frontend`
-- `stellar`
-- `soroban`
-- `trivial`
-- `medium`
-- `high`
-
-If the issue is part of a GrantFox or Drips Wave campaign, please follow the campaign rules before starting.
-
-### 2. Request Assignment
-
-Before working on an issue:
-
-1. Comment on the issue.
-2. Briefly explain how you plan to solve it.
-3. Wait for a maintainer to confirm or assign it.
-
-This avoids duplicated work.
-
-### 3. Fork and Clone
-
-Fork the repository, then clone your fork:
+## Local Setup
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/aiki-frontend.git
-cd aiki-frontend
+git clone https://github.com/Aiki-INC/aiki-smart-contract.git
+cd aiki-smart-contract
+git submodule update --init --recursive
+forge build
+forge test
 ```
 
-### 4. Create a Branch
+## Pull Request Checklist
 
-Use a clear branch name:
+Before submitting a PR, run:
 
 ```bash
-git checkout -b fix/navbar-responsive-layout
+forge fmt
+forge build
+forge test
 ```
 
-Examples:
+Your PR should include:
 
-```text
-fix/wallet-modal-error
-feat/dashboard-course-card
-docs/stellar-payment-flow
-chore/readme-cleanup
-```
+- A clear description of what changed.
+- The issue number it closes, if applicable.
+- Tests for contract logic changes where possible.
+- No private keys, RPC URLs, or secrets.
 
-### 5. Install and Run Locally
+## Good Contribution Areas
 
-```bash
-npm install
-cp .env.example .env.local
-npm run dev
-```
-
-Open:
-
-```text
-http://localhost:3000
-```
-
-### 6. Run Checks Before Submitting
-
-Before opening a pull request, run:
-
-```bash
-npm run lint
-npm run type-check
-npm run build
-```
-
-Your pull request is easier to review if all checks pass.
-
-## Pull Request Guidelines
-
-Please keep pull requests focused.
-
-A good pull request should:
-
-- Solve one issue or one clear task.
-- Include a short explanation of the change.
-- Include screenshots for UI changes when possible.
-- Avoid unrelated formatting or large rewrites.
-- Reference the issue it solves, for example: `Closes #12`.
-
-## Code Style
-
-Please follow the existing project style:
-
-- Use TypeScript.
-- Prefer clear component names.
-- Keep components focused and reusable.
-- Avoid unnecessary `any` types.
-- Keep UI responsive.
-- Use existing utilities and components where possible.
-
-## Documentation Contributions
-
-Documentation improvements are welcome.
-
-Useful documentation contributions include:
-
-- Setup instructions
-- Screenshots
-- Architecture notes
-- Wallet integration notes
-- Stellar/Soroban research
-- Contributor onboarding improvements
-
-## Stellar/Soroban Contributions
-
-Aiki is preparing a Stellar ecosystem roadmap. Strong contribution areas include:
-
-- Stellar wallet connection research
-- Stellar payment flow documentation
-- Soroban certificate verification design
-- Course reward logic research
-- Comparing EVM and Soroban contract architecture
-
-## Maintainer Review Process
-
-Maintainers will review pull requests based on:
-
-- Correctness
-- Scope control
-- Code quality
-- Documentation quality
-- Alignment with the issue requirements
-- Whether the implementation is easy to test and maintain
-
-## Community Expectations
-
-Please be respectful, patient, and constructive.
-
-We want Aiki to be welcoming to both experienced contributors and first-time open-source contributors.
+- Contract tests
+- Documentation
+- Deployment scripts
+- Soroban/Stellar research
+- Certificate verification improvements
+- Course payment flow improvements

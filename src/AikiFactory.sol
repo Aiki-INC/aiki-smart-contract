@@ -70,22 +70,33 @@ contract AikiFactory is Ownable {
     feeCollector = newCollector;
   }
 
+  /// @notice Returns all platforms deployed by a given owner.
+  /// @param owner Address of the platform owner.
+  /// @return Array of platform addresses.
   function getPlatformsByOwner(address owner) external view returns (address[] memory) {
     return deployedPlatforms[owner];
   }
 
+  /// @notice Returns all deployed platforms.
+  /// @return Array of all platform addresses.
   function getAllPlatforms() external view returns (address[] memory) {
     return allPlatforms;
   }
 
+  /// @notice Returns the total number of deployed platforms.
+  /// @return Total platform count.
   function getPlatformCount() external view returns (uint256) {
     return allPlatforms.length;
   }
 
+  /// @notice Checks if an address is a deployed platform.
+  /// @param platformAddress Address to check.
+  /// @return True if deployed, false otherwise.
   function isPlatformDeployed(address platformAddress) external view returns (bool) {
     return isPlatform[platformAddress];
   }
 
+  /// @notice Withdraws remaining contract balance to the owner.
   function withdraw() external onlyOwner {
     uint256 balance = address(this).balance;
     require(balance > 0, "No funds to withdraw");
